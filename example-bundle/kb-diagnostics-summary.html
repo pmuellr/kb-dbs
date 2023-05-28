@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQMAAAD58POIAAAAAXNSR0IArs4c6QAAAAZQTFRFIBMg5ojlq+xWMwAAAT9JREFUSMft0zFuwzAQBMA9sFCKAEzpIgDzBJcuAu+XXKoILHb5FvMTPYHlFYIuhSyZpIHAXVyY5YAg9lY6WHPwhLtAQwkjTf2jgFQQ+1cMJUBfwAKOUCAU8CktOAV8AYdOXS5h77XTroCPoH4qAbwLXAlBw/w3eA1TA/Wju66BT3cLdfSjaKe+BqmmJZo+iL5ujLFHVTLTYVd/hnR4R/uPfT9X7N8h07UgjwAxU0Za8heYcaJEb3AXmLCnoJuBCyhAwE0b5AUUGNZ9AQFRn1YIkTiLhpELJCbCkCsQi8s+wMzSMFIsZteAItTQb0nTkOksfW3BomU6S+ct2HIjDhGs3rDcwoxQg40rcFyi51DOIlcYPYijZJ9ZFiRZItvGuHb6RqCbtqQT9nTw19ZnnOhisLhOaz9mls1yeK7YDfwC3wXKOu5mu1cAAAAASUVORK5CYII=">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>kibana diagnostic bundle summary</title>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>  
+  <link  href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+<h1>kibana diagnostic bundle summary</h1>
+
+<hr/>
+<h2>Task Manager Health</h2>
+<table>
+<tr><td>id</td><td>537c0cfe-f21f-431a-abfd-af3fb2dc6721</td></tr>
+<tr><td>status</td><td>error</td></tr>
+<tr><td>timestamp</td><td>2023-05-27T14:33:57.366Z</td></tr>
+<tr><td>last_update</td><td>2023-05-27T14:33:57.131Z</td></tr>
+</table>
+<h2>configuration</h2>
+<table>
+<tr><td>timestamp</td><td>2023-01-12T15:00:31.352Z</td></tr>
+<tr><td>poll_interval</td><td>3000</td></tr>
+<tr><td>max_workers</td><td>10</td></tr>
+</table>
+<h2>runtime</h2>
+<h3>overall drift</h3>
+<button onclick="">sort by name</button>
+<button onclick="">sort by time</button>
+<div id="id0"></div>
+<h3>drift by type</h3>
+<button onclick="">sort by name</button>
+<button onclick="">sort by time</button>
+<div id="id1"></div>
+<h3>execution by type</h3>
+<button onclick="">sort by name</button>
+<button onclick="">sort by time</button>
+<div id="id2"></div>
+<details><summary>original file contents</summary>
+<pre><code class="language-json">
+{
+    &quot;id&quot;: &quot;537c0cfe-f21f-431a-abfd-af3fb2dc6721&quot;,
+    &quot;timestamp&quot;: &quot;2023-05-27T14:33:57.366Z&quot;,
+    &quot;status&quot;: &quot;error&quot;,
+    &quot;last_update&quot;: &quot;2023-05-27T14:33:57.131Z&quot;,
+    &quot;stats&quot;: {
+        &quot;configuration&quot;: {
+            &quot;timestamp&quot;: &quot;2023-01-12T15:00:31.352Z&quot;,
+            &quot;value&quot;: {
+                &quot;request_capacity&quot;: 1000,
+                &quot;max_poll_inactivity_cycles&quot;: 10,
+                &quot;monitored_aggregated_stats_refresh_rate&quot;: 60000,
+                &quot;monitored_stats_running_average_window&quot;: 50,
+                &quot;monitored_task_execution_thresholds&quot;: {
+                    &quot;default&quot;: {
+                        &quot;error_threshold&quot;: 90,
+                        &quot;warn_threshold&quot;: 80
+                    },
+                    &quot;custom&quot;: {}
+                },
+                &quot;poll_interval&quot;: 3000,
+                &quot;max_workers&quot;: 10
+            },
+            &quot;status&quot;: &quot;OK&quot;
+        },
+        &quot;runtime&quot;: {
+            &quot;timestamp&quot;: &quot;2023-05-27T14:33:57.130Z&quot;,
+            &quot;value&quot;: {
+                &quot;polling&quot;: {
+                    &quot;last_successful_poll&quot;: &quot;2023-05-27T14:33:55.946Z&quot;,
+                    &quot;last_polling_delay&quot;: &quot;2023-05-17T13:30:27.529Z&quot;,
+                    &quot;claim_duration&quot;: {
+                        &quot;p50&quot;: 26,
+                        &quot;p90&quot;: 79,
+                        &quot;p95&quot;: 171,
+                        &quot;p99&quot;: 1280
+                    },
+                    &quot;duration&quot;: {
+                        &quot;p50&quot;: 58,
+                        &quot;p90&quot;: 87,
+                        &quot;p95&quot;: 178,
+                        &quot;p99&quot;: 1303
+                    },
+                    &quot;claim_conflicts&quot;: {
+                        &quot;p50&quot;: 0,
+                        &quot;p90&quot;: 0,
+                        &quot;p95&quot;: 0,
+                        &quot;p99&quot;: 0
+                    },
+                    &quot;claim_mismatches&quot;: {
+                        &quot;p50&quot;: 0,
+                        &quot;p90&quot;: 0,
+                        &quot;p95&quot;: 0,
+                        &quot;p99&quot;: 0
+                    },
+                    &quot;result_frequency_percent_as_number&quot;: {
+                        &quot;Failed&quot;: 0,
+                        &quot;NoAvailableWorkers&quot;: 0,
+                        &quot;NoTasksClaimed&quot;: 0,
+                        &quot;RanOutOfCapacity&quot;: 50,
+                        &quot;RunningAtCapacity&quot;: 50,
+                        &quot;PoolFilled&quot;: 0
+                    },
+                    &quot;persistence&quot;: {
+                        &quot;recurring&quot;: 100,
+                        &quot;non_recurring&quot;: 0
+                    }
+                },
+                &quot;drift&quot;: {
+                    &quot;p50&quot;: 7246,
+                    &quot;p90&quot;: 8699.5,
+                    &quot;p95&quot;: 9258,
+                    &quot;p99&quot;: 9258
+                },
+                &quot;drift_by_type&quot;: {
+                    &quot;fleet:check-deleted-files-task&quot;: {
+                        &quot;p50&quot;: 7583,
+                        &quot;p90&quot;: 7700,
+                        &quot;p95&quot;: 7831,
+                        &quot;p99&quot;: 7928
+                    },
+                    &quot;osquery:telemetry-packs&quot;: {
+                        &quot;p50&quot;: 7586.5,
+                        &quot;p90&quot;: 7800,
+                        &quot;p95&quot;: 7931,
+                        &quot;p99&quot;: 12295
+                    },
+                    &quot;osquery:telemetry-saved-queries&quot;: {
+                        &quot;p50&quot;: 7575,
+                        &quot;p90&quot;: 7810,
+                        &quot;p95&quot;: 7930,
+                        &quot;p99&quot;: 8056
+                    },
+                    &quot;osquery:telemetry-configs&quot;: {
+                        &quot;p50&quot;: 7571.5,
+                        &quot;p90&quot;: 7758.5,
+                        &quot;p95&quot;: 7909,
+                        &quot;p99&quot;: 7988
+                    },
+                    &quot;alerts_invalidate_api_keys&quot;: {
+                        &quot;p50&quot;: 6028.5,
+                        &quot;p90&quot;: 6056.5,
+                        &quot;p95&quot;: 6065,
+                        &quot;p99&quot;: 6071
+                    },
+                    &quot;cleanup_failed_action_executions&quot;: {
+                        &quot;p50&quot;: 6205,
+                        &quot;p90&quot;: 6233.5,
+                        &quot;p95&quot;: 6247,
+                        &quot;p99&quot;: 6271
+                    },
+                    &quot;alerting_health_check&quot;: {
+                        &quot;p50&quot;: 6204,
+                        &quot;p90&quot;: 6231.5,
+                        &quot;p95&quot;: 6239,
+                        &quot;p99&quot;: 6288
+                    },
+                    &quot;Fleet-Usage-Logger&quot;: {
+                        &quot;p50&quot;: 6059,
+                        &quot;p90&quot;: 6088.5,
+                        &quot;p95&quot;: 6098,
+                        &quot;p99&quot;: 6179
+                    },
+                    &quot;Fleet-Usage-Sender&quot;: {
+                        &quot;p50&quot;: 6200.5,
+                        &quot;p90&quot;: 6233,
+                        &quot;p95&quot;: 6243,
+                        &quot;p99&quot;: 6282
+                    },
+                    &quot;cases-telemetry-task&quot;: {
+                        &quot;p50&quot;: 5292,
+                        &quot;p90&quot;: 5434.5,
+                        &quot;p95&quot;: 5766,
+                        &quot;p99&quot;: 6928
+                    },
+                    &quot;endpoint:metadata-check-transforms-task&quot;: {
+                        &quot;p50&quot;: 6389,
+                        &quot;p90&quot;: 6430.5,
+                        &quot;p95&quot;: 6448,
+                        &quot;p99&quot;: 6516
+                    },
+                    &quot;security:endpoint-diagnostics&quot;: {
+                        &quot;p50&quot;: 6027.5,
+                        &quot;p90&quot;: 6057.5,
+                        &quot;p95&quot;: 6071,
+                        &quot;p99&quot;: 6312
+                    },
+                    &quot;security:endpoint-meta-telemetry&quot;: {
+                        &quot;p50&quot;: 7577.5,
+                        &quot;p90&quot;: 7750,
+                        &quot;p95&quot;: 7909,
+                        &quot;p99&quot;: 8014
+                    },
+                    &quot;security:telemetry-timelines&quot;: {
+                        &quot;p50&quot;: 6577,
+                        &quot;p90&quot;: 6658.5,
+                        &quot;p95&quot;: 6714,
+                        &quot;p99&quot;: 6878
+                    },
+                    &quot;security:telemetry-configuration&quot;: {
+                        &quot;p50&quot;: 6204.5,
+                        &quot;p90&quot;: 6237.5,
+                        &quot;p95&quot;: 6252,
+                        &quot;p99&quot;: 9247
+                    },
+                    &quot;security:telemetry-prebuilt-rule-alerts&quot;: {
+                        &quot;p50&quot;: 6204.5,
+                        &quot;p90&quot;: 6246,
+                        &quot;p95&quot;: 6262,
+                        &quot;p99&quot;: 6418
+                    },
+                    &quot;security:telemetry-filterlist-artifact&quot;: {
+                        &quot;p50&quot;: 6151.5,
+                        &quot;p90&quot;: 6185,
+                        &quot;p95&quot;: 6191,
+                        &quot;p99&quot;: 6205
+                    },
+                    &quot;security:telemetry-detection-rules&quot;: {
+                        &quot;p50&quot;: 7579.5,
+                        &quot;p90&quot;: 7813,
+                        &quot;p95&quot;: 7937,
+                        &quot;p99&quot;: 9311
+                    },
+                    &quot;apm-telemetry-task&quot;: {
+                        &quot;p50&quot;: 5296,
+                        &quot;p90&quot;: 5438.5,
+                        &quot;p95&quot;: 5699,
+                        &quot;p99&quot;: 6952
+                    },
+                    &quot;security:telemetry-lists&quot;: {
+                        &quot;p50&quot;: 7579.5,
+                        &quot;p90&quot;: 7813,
+                        &quot;p95&quot;: 7937,
+                        &quot;p99&quot;: 9312
+                    },
+                    &quot;reports:monitor&quot;: {
+                        &quot;p50&quot;: 6018,
+                        &quot;p90&quot;: 6032,
+                        &quot;p95&quot;: 6052,
+                        &quot;p99&quot;: 6095
+                    },
+                    &quot;endpoint:user-artifact-packager&quot;: {
+                        &quot;p50&quot;: 5985.5,
+                        &quot;p90&quot;: 6011.5,
+                        &quot;p95&quot;: 6058,
+                        &quot;p99&quot;: 7233
+                    },
+                    &quot;alerting_telemetry&quot;: {
+                        &quot;p50&quot;: 6664,
+                        &quot;p90&quot;: 7862,
+                        &quot;p95&quot;: 8268,
+                        &quot;p99&quot;: 17590
+                    },
+                    &quot;actions_telemetry&quot;: {
+                        &quot;p50&quot;: 6663.5,
+                        &quot;p90&quot;: 7862,
+                        &quot;p95&quot;: 8267,
+                        &quot;p99&quot;: 17590
+                    },
+                    &quot;dashboard_telemetry&quot;: {
+                        &quot;p50&quot;: 6663.5,
+                        &quot;p90&quot;: 7861.5,
+                        &quot;p95&quot;: 8267,
+                        &quot;p99&quot;: 14589
+                    },
+                    &quot;session_cleanup&quot;: {
+                        &quot;p50&quot;: 6203,
+                        &quot;p90&quot;: 6232.5,
+                        &quot;p95&quot;: 6246,
+                        &quot;p99&quot;: 6321
+                    },
+                    &quot;UPTIME:SyntheticsService:Sync-Saved-Monitor-Objects&quot;: {
+                        &quot;p50&quot;: 6031.5,
+                        &quot;p90&quot;: 6062,
+                        &quot;p95&quot;: 6096,
+                        &quot;p99&quot;: 6408
+                    },
+                    &quot;ML:saved-objects-sync&quot;: {
+                        &quot;p50&quot;: 6198.5,
+                        &quot;p90&quot;: 6243,
+                        &quot;p95&quot;: 6290,
+                        &quot;p99&quot;: 6404
+                    },
+                    &quot;alerting:.index-threshold&quot;: {
+                        &quot;p50&quot;: 8004,
+                        &quot;p90&quot;: 8699.5,
+                        &quot;p95&quot;: 9258,
+                        &quot;p99&quot;: 9258
+                    },
+                    &quot;actions:.server-log&quot;: {
+                        &quot;p50&quot;: 20312,
+                        &quot;p90&quot;: 20497,
+                        &quot;p95&quot;: 20499,
+                        &quot;p99&quot;: 20499
+                    },
+                    &quot;actions:.email&quot;: {
+                        &quot;p50&quot;: 19094.5,
+                        &quot;p90&quot;: 23362,
+                        &quot;p95&quot;: 23363,
+                        &quot;p99&quot;: 23363
+                    },
+                    &quot;report:execute&quot;: {
+                        &quot;p50&quot;: 2892,
+                        &quot;p90&quot;: 4333,
+                        &quot;p95&quot;: 4333,
+                        &quot;p99&quot;: 4333
+                    },
+                    &quot;alerting:.es-query&quot;: {
+                        &quot;p50&quot;: 6016.5,
+                        &quot;p90&quot;: 6043.5,
+                        &quot;p95&quot;: 6085,
+                        &quot;p99&quot;: 7263
+                    },
+                    &quot;alerting:siem.queryRule&quot;: {
+                        &quot;p50&quot;: 8007,
+                        &quot;p90&quot;: 8032.5,
+                        &quot;p95&quot;: 8068,
+                        &quot;p99&quot;: 8249
+                    },
+                    &quot;alerting:metrics.alert.threshold&quot;: {
+                        &quot;p50&quot;: 6013,
+                        &quot;p90&quot;: 6053.5,
+                        &quot;p95&quot;: 6068,
+                        &quot;p99&quot;: 7259
+                    }
+                },
+                &quot;load&quot;: {
+                    &quot;p50&quot;: 100,
+                    &quot;p90&quot;: 100,
+                    &quot;p95&quot;: 100,
+                    &quot;p99&quot;: 100
+                },
+                &quot;execution&quot;: {
+                    &quot;duration&quot;: {
+                        &quot;fleet:check-deleted-files-task&quot;: {
+                            &quot;p50&quot;: 16,
+                            &quot;p90&quot;: 21,
+                            &quot;p95&quot;: 23,
+                            &quot;p99&quot;: 40
+                        },
+                        &quot;osquery:telemetry-packs&quot;: {
+                            &quot;p50&quot;: 17,
+                            &quot;p90&quot;: 24,
+                            &quot;p95&quot;: 26,
+                            &quot;p99&quot;: 30
+                        },
+                        &quot;osquery:telemetry-saved-queries&quot;: {
+                            &quot;p50&quot;: 18.5,
+                            &quot;p90&quot;: 26,
+                            &quot;p95&quot;: 44,
+                            &quot;p99&quot;: 193
+                        },
+                        &quot;osquery:telemetry-configs&quot;: {
+                            &quot;p50&quot;: 20,
+                            &quot;p90&quot;: 30,
+                            &quot;p95&quot;: 33,
+                            &quot;p99&quot;: 54
+                        },
+                        &quot;alerts_invalidate_api_keys&quot;: {
+                            &quot;p50&quot;: 22.5,
+                            &quot;p90&quot;: 28,
+                            &quot;p95&quot;: 44,
+                            &quot;p99&quot;: 70
+                        },
+                        &quot;cleanup_failed_action_executions&quot;: {
+                            &quot;p50&quot;: 23,
+                            &quot;p90&quot;: 27,
+                            &quot;p95&quot;: 28,
+                            &quot;p99&quot;: 42
+                        },
+                        &quot;alerting_health_check&quot;: {
+                            &quot;p50&quot;: 67.5,
+                            &quot;p90&quot;: 111.5,
+                            &quot;p95&quot;: 121,
+                            &quot;p99&quot;: 137
+                        },
+                        &quot;Fleet-Usage-Logger&quot;: {
+                            &quot;p50&quot;: 262.5,
+                            &quot;p90&quot;: 344.5,
+                            &quot;p95&quot;: 446,
+                            &quot;p99&quot;: 634
+                        },
+                        &quot;Fleet-Usage-Sender&quot;: {
+                            &quot;p50&quot;: 471.5,
+                            &quot;p90&quot;: 631.5,
+                            &quot;p95&quot;: 644,
+                            &quot;p99&quot;: 798
+                        },
+                        &quot;cases-telemetry-task&quot;: {
+                            &quot;p50&quot;: 767,
+                            &quot;p90&quot;: 1109.5,
+                            &quot;p95&quot;: 1131,
+                            &quot;p99&quot;: 1207
+                        },
+                        &quot;endpoint:metadata-check-transforms-task&quot;: {
+                            &quot;p50&quot;: 27.5,
+                            &quot;p90&quot;: 41.5,
+                            &quot;p95&quot;: 50,
+                            &quot;p99&quot;: 72
+                        },
+                        &quot;security:endpoint-diagnostics&quot;: {
+                            &quot;p50&quot;: 451,
+                            &quot;p90&quot;: 528.5,
+                            &quot;p95&quot;: 578,
+                            &quot;p99&quot;: 1138
+                        },
+                        &quot;security:endpoint-meta-telemetry&quot;: {
+                            &quot;p50&quot;: 476.5,
+                            &quot;p90&quot;: 627,
+                            &quot;p95&quot;: 658,
+                            &quot;p99&quot;: 721
+                        },
+                        &quot;security:telemetry-timelines&quot;: {
+                            &quot;p50&quot;: 492,
+                            &quot;p90&quot;: 638.5,
+                            &quot;p95&quot;: 725,
+                            &quot;p99&quot;: 832
+                        },
+                        &quot;security:telemetry-configuration&quot;: {
+                            &quot;p50&quot;: 567.5,
+                            &quot;p90&quot;: 709,
+                            &quot;p95&quot;: 762,
+                            &quot;p99&quot;: 791
+                        },
+                        &quot;security:telemetry-prebuilt-rule-alerts&quot;: {
+                            &quot;p50&quot;: 467.5,
+                            &quot;p90&quot;: 618.5,
+                            &quot;p95&quot;: 671,
+                            &quot;p99&quot;: 716
+                        },
+                        &quot;security:telemetry-filterlist-artifact&quot;: {
+                            &quot;p50&quot;: 570,
+                            &quot;p90&quot;: 700,
+                            &quot;p95&quot;: 747,
+                            &quot;p99&quot;: 818
+                        },
+                        &quot;security:telemetry-detection-rules&quot;: {
+                            &quot;p50&quot;: 477,
+                            &quot;p90&quot;: 605.5,
+                            &quot;p95&quot;: 641,
+                            &quot;p99&quot;: 692
+                        },
+                        &quot;apm-telemetry-task&quot;: {
+                            &quot;p50&quot;: 1106.5,
+                            &quot;p90&quot;: 1477.5,
+                            &quot;p95&quot;: 1570,
+                            &quot;p99&quot;: 1634
+                        },
+                        &quot;security:telemetry-lists&quot;: {
+                            &quot;p50&quot;: 722.5,
+                            &quot;p90&quot;: 958,
+                            &quot;p95&quot;: 1057,
+                            &quot;p99&quot;: 1173
+                        },
+                        &quot;reports:monitor&quot;: {
+                            &quot;p50&quot;: 18.5,
+                            &quot;p90&quot;: 23.5,
+                            &quot;p95&quot;: 25,
+                            &quot;p99&quot;: 30
+                        },
+                        &quot;endpoint:user-artifact-packager&quot;: {
+                            &quot;p50&quot;: 17,
+                            &quot;p90&quot;: 23,
+                            &quot;p95&quot;: 42,
+                            &quot;p99&quot;: 131
+                        },
+                        &quot;alerting_telemetry&quot;: {
+                            &quot;p50&quot;: 7282,
+                            &quot;p90&quot;: 7587.5,
+                            &quot;p95&quot;: 7680,
+                            &quot;p99&quot;: 7701
+                        },
+                        &quot;actions_telemetry&quot;: {
+                            &quot;p50&quot;: 153.5,
+                            &quot;p90&quot;: 201.5,
+                            &quot;p95&quot;: 298,
+                            &quot;p99&quot;: 2553
+                        },
+                        &quot;dashboard_telemetry&quot;: {
+                            &quot;p50&quot;: 57.5,
+                            &quot;p90&quot;: 91.5,
+                            &quot;p95&quot;: 114,
+                            &quot;p99&quot;: 186
+                        },
+                        &quot;session_cleanup&quot;: {
+                            &quot;p50&quot;: 26.5,
+                            &quot;p90&quot;: 39.5,
+                            &quot;p95&quot;: 44,
+                            &quot;p99&quot;: 61
+                        },
+                        &quot;UPTIME:SyntheticsService:Sync-Saved-Monitor-Objects&quot;: {
+                            &quot;p50&quot;: 463,
+                            &quot;p90&quot;: 795.5,
+                            &quot;p95&quot;: 826,
+                            &quot;p99&quot;: 904
+                        },
+                        &quot;ML:saved-objects-sync&quot;: {
+                            &quot;p50&quot;: 44.5,
+                            &quot;p90&quot;: 77.5,
+                            &quot;p95&quot;: 88,
+                            &quot;p99&quot;: 566
+                        },
+                        &quot;alerting:.index-threshold&quot;: {
+                            &quot;p50&quot;: 401.5,
+                            &quot;p90&quot;: 588.5,
+                            &quot;p95&quot;: 902,
+                            &quot;p99&quot;: 917
+                        },
+                        &quot;actions:.server-log&quot;: {
+                            &quot;p50&quot;: 177,
+                            &quot;p90&quot;: 235,
+                            &quot;p95&quot;: 251,
+                            &quot;p99&quot;: 265
+                        },
+                        &quot;actions:.email&quot;: {
+                            &quot;p50&quot;: 542,
+                            &quot;p90&quot;: 780.5,
+                            &quot;p95&quot;: 1598.5,
+                            &quot;p99&quot;: 1621
+                        },
+                        &quot;report:execute&quot;: {
+                            &quot;p50&quot;: 742,
+                            &quot;p90&quot;: 763,
+                            &quot;p95&quot;: 763,
+                            &quot;p99&quot;: 763
+                        },
+                        &quot;alerting:.es-query&quot;: {
+                            &quot;p50&quot;: 389,
+                            &quot;p90&quot;: 571,
+                            &quot;p95&quot;: 604,
+                            &quot;p99&quot;: 692
+                        },
+                        &quot;alerting:siem.queryRule&quot;: {
+                            &quot;p50&quot;: 1958.5,
+                            &quot;p90&quot;: 2339,
+                            &quot;p95&quot;: 2391,
+                            &quot;p99&quot;: 3459
+                        },
+                        &quot;alerting:metrics.alert.threshold&quot;: {
+                            &quot;p50&quot;: 457,
+                            &quot;p90&quot;: 610.5,
+                            &quot;p95&quot;: 626,
+                            &quot;p99&quot;: 661
+                        }
+                    },
+                    &quot;duration_by_persistence&quot;: {
+                        &quot;recurring&quot;: {
+                            &quot;p50&quot;: 405,
+                            &quot;p90&quot;: 899,
+                            &quot;p95&quot;: 917,
+                            &quot;p99&quot;: 3459
+                        },
+                        &quot;non_recurring&quot;: {
+                            &quot;p50&quot;: 152.5,
+                            &quot;p90&quot;: 7334,
+                            &quot;p95&quot;: 7571,
+                            &quot;p99&quot;: 7688
+                        }
+                    },
+                    &quot;persistence&quot;: {
+                        &quot;recurring&quot;: 100,
+                        &quot;non_recurring&quot;: 0,
+                        &quot;ephemeral&quot;: 0
+                    },
+                    &quot;result_frequency_percent_as_number&quot;: {
+                        &quot;fleet:check-deleted-files-task&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;osquery:telemetry-packs&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;osquery:telemetry-saved-queries&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;osquery:telemetry-configs&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;alerts_invalidate_api_keys&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;cleanup_failed_action_executions&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;alerting_health_check&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;Fleet-Usage-Logger&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;Fleet-Usage-Sender&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;cases-telemetry-task&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;endpoint:metadata-check-transforms-task&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;security:endpoint-diagnostics&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;security:endpoint-meta-telemetry&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;security:telemetry-timelines&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;security:telemetry-configuration&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;security:telemetry-prebuilt-rule-alerts&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;security:telemetry-filterlist-artifact&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;security:telemetry-detection-rules&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;apm-telemetry-task&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;security:telemetry-lists&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;reports:monitor&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;endpoint:user-artifact-packager&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;alerting_telemetry&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;actions_telemetry&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;dashboard_telemetry&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;session_cleanup&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;UPTIME:SyntheticsService:Sync-Saved-Monitor-Objects&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;ML:saved-objects-sync&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;alerting:.index-threshold&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;actions:.server-log&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;actions:.email&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;report:execute&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;alerting:.es-query&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;alerting:siem.queryRule&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        },
+                        &quot;alerting:metrics.alert.threshold&quot;: {
+                            &quot;Success&quot;: 100,
+                            &quot;RetryScheduled&quot;: 0,
+                            &quot;Failed&quot;: 0,
+                            &quot;status&quot;: &quot;OK&quot;
+                        }
+                    }
+                }
+            },
+            &quot;status&quot;: &quot;OK&quot;
+        },
+        &quot;workload&quot;: {
+            &quot;timestamp&quot;: &quot;2023-05-27T14:33:56.446Z&quot;,
+            &quot;value&quot;: {
+                &quot;count&quot;: 53,
+                &quot;task_types&quot;: {
+                    &quot;alerting:.index-threshold&quot;: {
+                        &quot;count&quot;: 22,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 10,
+                            &quot;running&quot;: 7,
+                            &quot;claiming&quot;: 5
+                        }
+                    },
+                    &quot;Fleet-Usage-Logger&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;Fleet-Usage-Sender&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;ML:saved-objects-sync&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;UPTIME:SyntheticsService:Sync-Saved-Monitor-Objects&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;actions_telemetry&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;alerting:.es-query&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;alerting:metrics.alert.threshold&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;alerting:siem.queryRule&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;running&quot;: 1
+                        }
+                    },
+                    &quot;alerting_health_check&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;alerting_telemetry&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;alerts_invalidate_api_keys&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;apm-telemetry-task&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;cases-telemetry-task&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;cleanup_failed_action_executions&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;dashboard_telemetry&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;endpoint:metadata-check-transforms-task&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;endpoint:user-artifact-packager&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;fleet:check-deleted-files-task&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;osquery:telemetry-configs&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;osquery:telemetry-packs&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;osquery:telemetry-saved-queries&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;reports:monitor&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;security:endpoint-diagnostics&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;running&quot;: 1
+                        }
+                    },
+                    &quot;security:endpoint-meta-telemetry&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;security:telemetry-configuration&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;security:telemetry-detection-rules&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;security:telemetry-filterlist-artifact&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;security:telemetry-lists&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;security:telemetry-prebuilt-rule-alerts&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;security:telemetry-timelines&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    },
+                    &quot;session_cleanup&quot;: {
+                        &quot;count&quot;: 1,
+                        &quot;status&quot;: {
+                            &quot;idle&quot;: 1
+                        }
+                    }
+                },
+                &quot;non_recurring&quot;: 53,
+                &quot;owner_ids&quot;: 1,
+                &quot;schedule&quot;: [
+                    [
+                        &quot;1s&quot;,
+                        22
+                    ],
+                    [
+                        &quot;3s&quot;,
+                        3
+                    ],
+                    [
+                        &quot;1m&quot;,
+                        1
+                    ],
+                    [
+                        &quot;60s&quot;,
+                        1
+                    ],
+                    [
+                        &quot;5m&quot;,
+                        3
+                    ],
+                    [
+                        &quot;15m&quot;,
+                        1
+                    ],
+                    [
+                        &quot;45m&quot;,
+                        1
+                    ],
+                    [
+                        &quot;1h&quot;,
+                        4
+                    ],
+                    [
+                        &quot;60m&quot;,
+                        2
+                    ],
+                    [
+                        &quot;3600s&quot;,
+                        1
+                    ],
+                    [
+                        &quot;2h&quot;,
+                        1
+                    ],
+                    [
+                        &quot;3h&quot;,
+                        1
+                    ],
+                    [
+                        &quot;720m&quot;,
+                        2
+                    ],
+                    [
+                        &quot;24h&quot;,
+                        6
+                    ],
+                    [
+                        &quot;1d&quot;,
+                        1
+                    ]
+                ],
+                &quot;overdue&quot;: 10,
+                &quot;overdue_non_recurring&quot;: 10,
+                &quot;estimated_schedule_density&quot;: [
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    3,
+                    2,
+                    4,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    3,
+                    2,
+                    2,
+                    2,
+                    4
+                ],
+                &quot;capacity_requirements&quot;: {
+                    &quot;per_minute&quot;: 1382,
+                    &quot;per_hour&quot;: 48,
+                    &quot;per_day&quot;: 31
+                }
+            },
+            &quot;status&quot;: &quot;OK&quot;
+        },
+        &quot;capacity_estimation&quot;: {
+            &quot;status&quot;: &quot;error&quot;,
+            &quot;timestamp&quot;: &quot;2023-05-27T14:33:57.366Z&quot;,
+            &quot;value&quot;: {
+                &quot;observed&quot;: {
+                    &quot;observed_kibana_instances&quot;: 1,
+                    &quot;max_throughput_per_minute_per_kibana&quot;: 200,
+                    &quot;max_throughput_per_minute&quot;: 200,
+                    &quot;minutes_to_drain_overdue&quot;: 10,
+                    &quot;avg_recurring_required_throughput_per_minute&quot;: 1383,
+                    &quot;avg_recurring_required_throughput_per_minute_per_kibana&quot;: 1383,
+                    &quot;avg_required_throughput_per_minute&quot;: 1383,
+                    &quot;avg_required_throughput_per_minute_per_kibana&quot;: 1383
+                },
+                &quot;proposed&quot;: {
+                    &quot;provisioned_kibana&quot;: 9,
+                    &quot;min_required_kibana&quot;: 7,
+                    &quot;avg_recurring_required_throughput_per_minute_per_kibana&quot;: 154,
+                    &quot;avg_required_throughput_per_minute_per_kibana&quot;: 154
+                }
+            }
+        }
+    }
+}
+</code></pre></details>
+
+</body>
+<script>
+vegaEmbed('#id0', {"$schema":"https://vega.github.io/schema/vega-lite/v5.json","data":{"values":[{"name":"overall drift","type":"p50","max":9258,"value":7.246},{"name":"overall drift","type":"p90","max":9258,"value":1.4535},{"name":"overall drift","type":"p95","max":9258,"value":0.5585},{"name":"overall drift","type":"p99","max":9258,"value":0}]},"mark":"bar","width":500,"encoding":{"x":{"aggregate":"sum","field":"value","title":"seconds"},"y":{"field":"name","title":null},"color":{"field":"type","type":"nominal","scale":{"domain":["p50","p90","p95","p99"],"range":["#0f0","#00f","#ff0","#f00"]}}}});
+vegaEmbed('#id1', {"$schema":"https://vega.github.io/schema/vega-lite/v5.json","data":{"values":[{"name":"actions:.email","type":"p50","max":23363,"value":19.0945},{"name":"actions:.email","type":"p90","max":23363,"value":4.2675},{"name":"actions:.email","type":"p95","max":23363,"value":0.001},{"name":"actions:.email","type":"p99","max":23363,"value":0},{"name":"actions:.server-log","type":"p50","max":20499,"value":20.312},{"name":"actions:.server-log","type":"p90","max":20499,"value":0.185},{"name":"actions:.server-log","type":"p95","max":20499,"value":0.002},{"name":"actions:.server-log","type":"p99","max":20499,"value":0},{"name":"alerting_telemetry","type":"p50","max":17590,"value":6.664},{"name":"alerting_telemetry","type":"p90","max":17590,"value":1.198},{"name":"alerting_telemetry","type":"p95","max":17590,"value":0.406},{"name":"alerting_telemetry","type":"p99","max":17590,"value":9.322},{"name":"actions_telemetry","type":"p50","max":17590,"value":6.6635},{"name":"actions_telemetry","type":"p90","max":17590,"value":1.1985},{"name":"actions_telemetry","type":"p95","max":17590,"value":0.405},{"name":"actions_telemetry","type":"p99","max":17590,"value":9.323},{"name":"dashboard_telemetry","type":"p50","max":14589,"value":6.6635},{"name":"dashboard_telemetry","type":"p90","max":14589,"value":1.198},{"name":"dashboard_telemetry","type":"p95","max":14589,"value":0.4055},{"name":"dashboard_telemetry","type":"p99","max":14589,"value":6.322},{"name":"osquery:telemetry-packs","type":"p50","max":12295,"value":7.5865},{"name":"osquery:telemetry-packs","type":"p90","max":12295,"value":0.2135},{"name":"osquery:telemetry-packs","type":"p95","max":12295,"value":0.131},{"name":"osquery:telemetry-packs","type":"p99","max":12295,"value":4.364},{"name":"security:telemetry-lists","type":"p50","max":9312,"value":7.5795},{"name":"security:telemetry-lists","type":"p90","max":9312,"value":0.2335},{"name":"security:telemetry-lists","type":"p95","max":9312,"value":0.124},{"name":"security:telemetry-lists","type":"p99","max":9312,"value":1.375},{"name":"security:telemetry-detection-rules","type":"p50","max":9311,"value":7.5795},{"name":"security:telemetry-detection-rules","type":"p90","max":9311,"value":0.2335},{"name":"security:telemetry-detection-rules","type":"p95","max":9311,"value":0.124},{"name":"security:telemetry-detection-rules","type":"p99","max":9311,"value":1.374},{"name":"alerting:.index-threshold","type":"p50","max":9258,"value":8.004},{"name":"alerting:.index-threshold","type":"p90","max":9258,"value":0.6955},{"name":"alerting:.index-threshold","type":"p95","max":9258,"value":0.5585},{"name":"alerting:.index-threshold","type":"p99","max":9258,"value":0},{"name":"security:telemetry-configuration","type":"p50","max":9247,"value":6.2045},{"name":"security:telemetry-configuration","type":"p90","max":9247,"value":0.033},{"name":"security:telemetry-configuration","type":"p95","max":9247,"value":0.0145},{"name":"security:telemetry-configuration","type":"p99","max":9247,"value":2.995},{"name":"alerting:siem.queryRule","type":"p50","max":8249,"value":8.007},{"name":"alerting:siem.queryRule","type":"p90","max":8249,"value":0.0255},{"name":"alerting:siem.queryRule","type":"p95","max":8249,"value":0.0355},{"name":"alerting:siem.queryRule","type":"p99","max":8249,"value":0.181},{"name":"osquery:telemetry-saved-queries","type":"p50","max":8056,"value":7.575},{"name":"osquery:telemetry-saved-queries","type":"p90","max":8056,"value":0.235},{"name":"osquery:telemetry-saved-queries","type":"p95","max":8056,"value":0.12},{"name":"osquery:telemetry-saved-queries","type":"p99","max":8056,"value":0.126},{"name":"security:endpoint-meta-telemetry","type":"p50","max":8014,"value":7.5775},{"name":"security:endpoint-meta-telemetry","type":"p90","max":8014,"value":0.1725},{"name":"security:endpoint-meta-telemetry","type":"p95","max":8014,"value":0.159},{"name":"security:endpoint-meta-telemetry","type":"p99","max":8014,"value":0.105},{"name":"osquery:telemetry-configs","type":"p50","max":7988,"value":7.5715},{"name":"osquery:telemetry-configs","type":"p90","max":7988,"value":0.187},{"name":"osquery:telemetry-configs","type":"p95","max":7988,"value":0.1505},{"name":"osquery:telemetry-configs","type":"p99","max":7988,"value":0.079},{"name":"fleet:check-deleted-files-task","type":"p50","max":7928,"value":7.583},{"name":"fleet:check-deleted-files-task","type":"p90","max":7928,"value":0.117},{"name":"fleet:check-deleted-files-task","type":"p95","max":7928,"value":0.131},{"name":"fleet:check-deleted-files-task","type":"p99","max":7928,"value":0.097},{"name":"alerting:.es-query","type":"p50","max":7263,"value":6.0165},{"name":"alerting:.es-query","type":"p90","max":7263,"value":0.027},{"name":"alerting:.es-query","type":"p95","max":7263,"value":0.0415},{"name":"alerting:.es-query","type":"p99","max":7263,"value":1.178},{"name":"alerting:metrics.alert.threshold","type":"p50","max":7259,"value":6.013},{"name":"alerting:metrics.alert.threshold","type":"p90","max":7259,"value":0.0405},{"name":"alerting:metrics.alert.threshold","type":"p95","max":7259,"value":0.0145},{"name":"alerting:metrics.alert.threshold","type":"p99","max":7259,"value":1.191},{"name":"endpoint:user-artifact-packager","type":"p50","max":7233,"value":5.9855},{"name":"endpoint:user-artifact-packager","type":"p90","max":7233,"value":0.026},{"name":"endpoint:user-artifact-packager","type":"p95","max":7233,"value":0.0465},{"name":"endpoint:user-artifact-packager","type":"p99","max":7233,"value":1.175},{"name":"apm-telemetry-task","type":"p50","max":6952,"value":5.296},{"name":"apm-telemetry-task","type":"p90","max":6952,"value":0.1425},{"name":"apm-telemetry-task","type":"p95","max":6952,"value":0.2605},{"name":"apm-telemetry-task","type":"p99","max":6952,"value":1.253},{"name":"cases-telemetry-task","type":"p50","max":6928,"value":5.292},{"name":"cases-telemetry-task","type":"p90","max":6928,"value":0.1425},{"name":"cases-telemetry-task","type":"p95","max":6928,"value":0.3315},{"name":"cases-telemetry-task","type":"p99","max":6928,"value":1.162},{"name":"security:telemetry-timelines","type":"p50","max":6878,"value":6.577},{"name":"security:telemetry-timelines","type":"p90","max":6878,"value":0.0815},{"name":"security:telemetry-timelines","type":"p95","max":6878,"value":0.0555},{"name":"security:telemetry-timelines","type":"p99","max":6878,"value":0.164},{"name":"endpoint:metadata-check-transforms-task","type":"p50","max":6516,"value":6.389},{"name":"endpoint:metadata-check-transforms-task","type":"p90","max":6516,"value":0.0415},{"name":"endpoint:metadata-check-transforms-task","type":"p95","max":6516,"value":0.0175},{"name":"endpoint:metadata-check-transforms-task","type":"p99","max":6516,"value":0.068},{"name":"security:telemetry-prebuilt-rule-alerts","type":"p50","max":6418,"value":6.2045},{"name":"security:telemetry-prebuilt-rule-alerts","type":"p90","max":6418,"value":0.0415},{"name":"security:telemetry-prebuilt-rule-alerts","type":"p95","max":6418,"value":0.016},{"name":"security:telemetry-prebuilt-rule-alerts","type":"p99","max":6418,"value":0.156},{"name":"UPTIME:SyntheticsService:Sync-Saved-Monitor-Objects","type":"p50","max":6408,"value":6.0315},{"name":"UPTIME:SyntheticsService:Sync-Saved-Monitor-Objects","type":"p90","max":6408,"value":0.0305},{"name":"UPTIME:SyntheticsService:Sync-Saved-Monitor-Objects","type":"p95","max":6408,"value":0.034},{"name":"UPTIME:SyntheticsService:Sync-Saved-Monitor-Objects","type":"p99","max":6408,"value":0.312},{"name":"ML:saved-objects-sync","type":"p50","max":6404,"value":6.1985},{"name":"ML:saved-objects-sync","type":"p90","max":6404,"value":0.0445},{"name":"ML:saved-objects-sync","type":"p95","max":6404,"value":0.047},{"name":"ML:saved-objects-sync","type":"p99","max":6404,"value":0.114},{"name":"session_cleanup","type":"p50","max":6321,"value":6.203},{"name":"session_cleanup","type":"p90","max":6321,"value":0.0295},{"name":"session_cleanup","type":"p95","max":6321,"value":0.0135},{"name":"session_cleanup","type":"p99","max":6321,"value":0.075},{"name":"security:endpoint-diagnostics","type":"p50","max":6312,"value":6.0275},{"name":"security:endpoint-diagnostics","type":"p90","max":6312,"value":0.03},{"name":"security:endpoint-diagnostics","type":"p95","max":6312,"value":0.0135},{"name":"security:endpoint-diagnostics","type":"p99","max":6312,"value":0.241},{"name":"alerting_health_check","type":"p50","max":6288,"value":6.204},{"name":"alerting_health_check","type":"p90","max":6288,"value":0.0275},{"name":"alerting_health_check","type":"p95","max":6288,"value":0.0075},{"name":"alerting_health_check","type":"p99","max":6288,"value":0.049},{"name":"Fleet-Usage-Sender","type":"p50","max":6282,"value":6.2005},{"name":"Fleet-Usage-Sender","type":"p90","max":6282,"value":0.0325},{"name":"Fleet-Usage-Sender","type":"p95","max":6282,"value":0.01},{"name":"Fleet-Usage-Sender","type":"p99","max":6282,"value":0.039},{"name":"cleanup_failed_action_executions","type":"p50","max":6271,"value":6.205},{"name":"cleanup_failed_action_executions","type":"p90","max":6271,"value":0.0285},{"name":"cleanup_failed_action_executions","type":"p95","max":6271,"value":0.0135},{"name":"cleanup_failed_action_executions","type":"p99","max":6271,"value":0.024},{"name":"security:telemetry-filterlist-artifact","type":"p50","max":6205,"value":6.1515},{"name":"security:telemetry-filterlist-artifact","type":"p90","max":6205,"value":0.0335},{"name":"security:telemetry-filterlist-artifact","type":"p95","max":6205,"value":0.006},{"name":"security:telemetry-filterlist-artifact","type":"p99","max":6205,"value":0.014},{"name":"Fleet-Usage-Logger","type":"p50","max":6179,"value":6.059},{"name":"Fleet-Usage-Logger","type":"p90","max":6179,"value":0.0295},{"name":"Fleet-Usage-Logger","type":"p95","max":6179,"value":0.0095},{"name":"Fleet-Usage-Logger","type":"p99","max":6179,"value":0.081},{"name":"reports:monitor","type":"p50","max":6095,"value":6.018},{"name":"reports:monitor","type":"p90","max":6095,"value":0.014},{"name":"reports:monitor","type":"p95","max":6095,"value":0.02},{"name":"reports:monitor","type":"p99","max":6095,"value":0.043},{"name":"alerts_invalidate_api_keys","type":"p50","max":6071,"value":6.0285},{"name":"alerts_invalidate_api_keys","type":"p90","max":6071,"value":0.028},{"name":"alerts_invalidate_api_keys","type":"p95","max":6071,"value":0.0085},{"name":"alerts_invalidate_api_keys","type":"p99","max":6071,"value":0.006},{"name":"report:execute","type":"p50","max":4333,"value":2.892},{"name":"report:execute","type":"p90","max":4333,"value":1.441},{"name":"report:execute","type":"p95","max":4333,"value":0},{"name":"report:execute","type":"p99","max":4333,"value":0}]},"mark":"bar","width":500,"encoding":{"x":{"aggregate":"sum","field":"value","title":"seconds"},"y":{"field":"name","title":null},"color":{"field":"type","type":"nominal","scale":{"domain":["p50","p90","p95","p99"],"range":["#0f0","#00f","#ff0","#f00"]}}}});
+vegaEmbed('#id2', {"$schema":"https://vega.github.io/schema/vega-lite/v5.json","data":{"values":[{"name":"alerting_telemetry","type":"p50","max":7701,"value":7.282},{"name":"alerting_telemetry","type":"p90","max":7701,"value":0.3055},{"name":"alerting_telemetry","type":"p95","max":7701,"value":0.0925},{"name":"alerting_telemetry","type":"p99","max":7701,"value":0.021},{"name":"alerting:siem.queryRule","type":"p50","max":3459,"value":1.9585},{"name":"alerting:siem.queryRule","type":"p90","max":3459,"value":0.3805},{"name":"alerting:siem.queryRule","type":"p95","max":3459,"value":0.052},{"name":"alerting:siem.queryRule","type":"p99","max":3459,"value":1.068},{"name":"actions_telemetry","type":"p50","max":2553,"value":0.1535},{"name":"actions_telemetry","type":"p90","max":2553,"value":0.048},{"name":"actions_telemetry","type":"p95","max":2553,"value":0.0965},{"name":"actions_telemetry","type":"p99","max":2553,"value":2.255},{"name":"apm-telemetry-task","type":"p50","max":1634,"value":1.1065},{"name":"apm-telemetry-task","type":"p90","max":1634,"value":0.371},{"name":"apm-telemetry-task","type":"p95","max":1634,"value":0.0925},{"name":"apm-telemetry-task","type":"p99","max":1634,"value":0.064},{"name":"actions:.email","type":"p50","max":1621,"value":0.542},{"name":"actions:.email","type":"p90","max":1621,"value":0.2385},{"name":"actions:.email","type":"p95","max":1621,"value":0.818},{"name":"actions:.email","type":"p99","max":1621,"value":0.0225},{"name":"cases-telemetry-task","type":"p50","max":1207,"value":0.767},{"name":"cases-telemetry-task","type":"p90","max":1207,"value":0.3425},{"name":"cases-telemetry-task","type":"p95","max":1207,"value":0.0215},{"name":"cases-telemetry-task","type":"p99","max":1207,"value":0.076},{"name":"security:telemetry-lists","type":"p50","max":1173,"value":0.7225},{"name":"security:telemetry-lists","type":"p90","max":1173,"value":0.2355},{"name":"security:telemetry-lists","type":"p95","max":1173,"value":0.099},{"name":"security:telemetry-lists","type":"p99","max":1173,"value":0.116},{"name":"security:endpoint-diagnostics","type":"p50","max":1138,"value":0.451},{"name":"security:endpoint-diagnostics","type":"p90","max":1138,"value":0.0775},{"name":"security:endpoint-diagnostics","type":"p95","max":1138,"value":0.0495},{"name":"security:endpoint-diagnostics","type":"p99","max":1138,"value":0.56},{"name":"alerting:.index-threshold","type":"p50","max":917,"value":0.4015},{"name":"alerting:.index-threshold","type":"p90","max":917,"value":0.187},{"name":"alerting:.index-threshold","type":"p95","max":917,"value":0.3135},{"name":"alerting:.index-threshold","type":"p99","max":917,"value":0.015},{"name":"UPTIME:SyntheticsService:Sync-Saved-Monitor-Objects","type":"p50","max":904,"value":0.463},{"name":"UPTIME:SyntheticsService:Sync-Saved-Monitor-Objects","type":"p90","max":904,"value":0.3325},{"name":"UPTIME:SyntheticsService:Sync-Saved-Monitor-Objects","type":"p95","max":904,"value":0.0305},{"name":"UPTIME:SyntheticsService:Sync-Saved-Monitor-Objects","type":"p99","max":904,"value":0.078},{"name":"security:telemetry-timelines","type":"p50","max":832,"value":0.492},{"name":"security:telemetry-timelines","type":"p90","max":832,"value":0.1465},{"name":"security:telemetry-timelines","type":"p95","max":832,"value":0.0865},{"name":"security:telemetry-timelines","type":"p99","max":832,"value":0.107},{"name":"security:telemetry-filterlist-artifact","type":"p50","max":818,"value":0.57},{"name":"security:telemetry-filterlist-artifact","type":"p90","max":818,"value":0.13},{"name":"security:telemetry-filterlist-artifact","type":"p95","max":818,"value":0.047},{"name":"security:telemetry-filterlist-artifact","type":"p99","max":818,"value":0.071},{"name":"Fleet-Usage-Sender","type":"p50","max":798,"value":0.4715},{"name":"Fleet-Usage-Sender","type":"p90","max":798,"value":0.16},{"name":"Fleet-Usage-Sender","type":"p95","max":798,"value":0.0125},{"name":"Fleet-Usage-Sender","type":"p99","max":798,"value":0.154},{"name":"security:telemetry-configuration","type":"p50","max":791,"value":0.5675},{"name":"security:telemetry-configuration","type":"p90","max":791,"value":0.1415},{"name":"security:telemetry-configuration","type":"p95","max":791,"value":0.053},{"name":"security:telemetry-configuration","type":"p99","max":791,"value":0.029},{"name":"report:execute","type":"p50","max":763,"value":0.742},{"name":"report:execute","type":"p90","max":763,"value":0.021},{"name":"report:execute","type":"p95","max":763,"value":0},{"name":"report:execute","type":"p99","max":763,"value":0},{"name":"security:endpoint-meta-telemetry","type":"p50","max":721,"value":0.4765},{"name":"security:endpoint-meta-telemetry","type":"p90","max":721,"value":0.1505},{"name":"security:endpoint-meta-telemetry","type":"p95","max":721,"value":0.031},{"name":"security:endpoint-meta-telemetry","type":"p99","max":721,"value":0.063},{"name":"security:telemetry-prebuilt-rule-alerts","type":"p50","max":716,"value":0.4675},{"name":"security:telemetry-prebuilt-rule-alerts","type":"p90","max":716,"value":0.151},{"name":"security:telemetry-prebuilt-rule-alerts","type":"p95","max":716,"value":0.0525},{"name":"security:telemetry-prebuilt-rule-alerts","type":"p99","max":716,"value":0.045},{"name":"security:telemetry-detection-rules","type":"p50","max":692,"value":0.477},{"name":"security:telemetry-detection-rules","type":"p90","max":692,"value":0.1285},{"name":"security:telemetry-detection-rules","type":"p95","max":692,"value":0.0355},{"name":"security:telemetry-detection-rules","type":"p99","max":692,"value":0.051},{"name":"alerting:.es-query","type":"p50","max":692,"value":0.389},{"name":"alerting:.es-query","type":"p90","max":692,"value":0.182},{"name":"alerting:.es-query","type":"p95","max":692,"value":0.033},{"name":"alerting:.es-query","type":"p99","max":692,"value":0.088},{"name":"alerting:metrics.alert.threshold","type":"p50","max":661,"value":0.457},{"name":"alerting:metrics.alert.threshold","type":"p90","max":661,"value":0.1535},{"name":"alerting:metrics.alert.threshold","type":"p95","max":661,"value":0.0155},{"name":"alerting:metrics.alert.threshold","type":"p99","max":661,"value":0.035},{"name":"Fleet-Usage-Logger","type":"p50","max":634,"value":0.2625},{"name":"Fleet-Usage-Logger","type":"p90","max":634,"value":0.082},{"name":"Fleet-Usage-Logger","type":"p95","max":634,"value":0.1015},{"name":"Fleet-Usage-Logger","type":"p99","max":634,"value":0.188},{"name":"ML:saved-objects-sync","type":"p50","max":566,"value":0.0445},{"name":"ML:saved-objects-sync","type":"p90","max":566,"value":0.033},{"name":"ML:saved-objects-sync","type":"p95","max":566,"value":0.0105},{"name":"ML:saved-objects-sync","type":"p99","max":566,"value":0.478},{"name":"actions:.server-log","type":"p50","max":265,"value":0.177},{"name":"actions:.server-log","type":"p90","max":265,"value":0.058},{"name":"actions:.server-log","type":"p95","max":265,"value":0.016},{"name":"actions:.server-log","type":"p99","max":265,"value":0.014},{"name":"osquery:telemetry-saved-queries","type":"p50","max":193,"value":0.0185},{"name":"osquery:telemetry-saved-queries","type":"p90","max":193,"value":0.0075},{"name":"osquery:telemetry-saved-queries","type":"p95","max":193,"value":0.018},{"name":"osquery:telemetry-saved-queries","type":"p99","max":193,"value":0.149},{"name":"dashboard_telemetry","type":"p50","max":186,"value":0.0575},{"name":"dashboard_telemetry","type":"p90","max":186,"value":0.034},{"name":"dashboard_telemetry","type":"p95","max":186,"value":0.0225},{"name":"dashboard_telemetry","type":"p99","max":186,"value":0.072},{"name":"alerting_health_check","type":"p50","max":137,"value":0.0675},{"name":"alerting_health_check","type":"p90","max":137,"value":0.044},{"name":"alerting_health_check","type":"p95","max":137,"value":0.0095},{"name":"alerting_health_check","type":"p99","max":137,"value":0.016},{"name":"endpoint:user-artifact-packager","type":"p50","max":131,"value":0.017},{"name":"endpoint:user-artifact-packager","type":"p90","max":131,"value":0.006},{"name":"endpoint:user-artifact-packager","type":"p95","max":131,"value":0.019},{"name":"endpoint:user-artifact-packager","type":"p99","max":131,"value":0.089},{"name":"endpoint:metadata-check-transforms-task","type":"p50","max":72,"value":0.0275},{"name":"endpoint:metadata-check-transforms-task","type":"p90","max":72,"value":0.014},{"name":"endpoint:metadata-check-transforms-task","type":"p95","max":72,"value":0.0085},{"name":"endpoint:metadata-check-transforms-task","type":"p99","max":72,"value":0.022},{"name":"alerts_invalidate_api_keys","type":"p50","max":70,"value":0.0225},{"name":"alerts_invalidate_api_keys","type":"p90","max":70,"value":0.0055},{"name":"alerts_invalidate_api_keys","type":"p95","max":70,"value":0.016},{"name":"alerts_invalidate_api_keys","type":"p99","max":70,"value":0.026},{"name":"session_cleanup","type":"p50","max":61,"value":0.0265},{"name":"session_cleanup","type":"p90","max":61,"value":0.013},{"name":"session_cleanup","type":"p95","max":61,"value":0.0045},{"name":"session_cleanup","type":"p99","max":61,"value":0.017},{"name":"osquery:telemetry-configs","type":"p50","max":54,"value":0.02},{"name":"osquery:telemetry-configs","type":"p90","max":54,"value":0.01},{"name":"osquery:telemetry-configs","type":"p95","max":54,"value":0.003},{"name":"osquery:telemetry-configs","type":"p99","max":54,"value":0.021},{"name":"cleanup_failed_action_executions","type":"p50","max":42,"value":0.023},{"name":"cleanup_failed_action_executions","type":"p90","max":42,"value":0.004},{"name":"cleanup_failed_action_executions","type":"p95","max":42,"value":0.001},{"name":"cleanup_failed_action_executions","type":"p99","max":42,"value":0.014},{"name":"fleet:check-deleted-files-task","type":"p50","max":40,"value":0.016},{"name":"fleet:check-deleted-files-task","type":"p90","max":40,"value":0.005},{"name":"fleet:check-deleted-files-task","type":"p95","max":40,"value":0.002},{"name":"fleet:check-deleted-files-task","type":"p99","max":40,"value":0.017},{"name":"osquery:telemetry-packs","type":"p50","max":30,"value":0.017},{"name":"osquery:telemetry-packs","type":"p90","max":30,"value":0.007},{"name":"osquery:telemetry-packs","type":"p95","max":30,"value":0.002},{"name":"osquery:telemetry-packs","type":"p99","max":30,"value":0.004},{"name":"reports:monitor","type":"p50","max":30,"value":0.0185},{"name":"reports:monitor","type":"p90","max":30,"value":0.005},{"name":"reports:monitor","type":"p95","max":30,"value":0.0015},{"name":"reports:monitor","type":"p99","max":30,"value":0.005}]},"mark":"bar","width":500,"encoding":{"x":{"aggregate":"sum","field":"value","title":"seconds"},"y":{"field":"name","title":null},"color":{"field":"type","type":"nominal","scale":{"domain":["p50","p90","p95","p99"],"range":["#0f0","#00f","#ff0","#f00"]}}}});
+</script>
+</html>

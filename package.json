@@ -1,0 +1,22 @@
+{
+  "name": "kb-dbs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "kibana diagnostic bundle summarist",
+  "license": "MIT",
+  "author": "Patrick Mueller <pmuellr@apache.org> (https://github.com/pmuellr)",
+  "homepage": "https://github.com/pmuellr/kb-dbs",
+  "bin": {
+    "kb-dbs": "./kb-dbs.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pmuellr/kb-dbs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pmuellr/kb-dbs/issues"
+  },
+  "dependencies": {
+    "meow": "^12.0.1"
+  }
+}
