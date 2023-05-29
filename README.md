@@ -7,6 +7,8 @@ Kibana [diagnostics bundle][].
 [diagnostics bundle]: https://www.elastic.co/blog/why-does-elastic-support-keep-asking-for-diagnostic-files
 
 
+For example, see: https://pmuellr.github.io/kb-dbs
+
 usage
 ================================================================================
 
