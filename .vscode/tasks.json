@@ -6,7 +6,7 @@
     {
       "label": "kb-dbs.mjs example-bundle",
       "type": "shell",
-      "command": "node kb-dbs.mjs example-bundle --debug",
+      "command": "node kb-dbs.mjs example-bundle --debug; cp example-bundle/kb-diagnostics-summary.html docs/index.html",
       "group": {
         "kind": "build",
         "isDefault": true
